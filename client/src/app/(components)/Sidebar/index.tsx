@@ -3,6 +3,7 @@ import {Archive, CircleDollarSign, ClipboardIcon, Layout, Menu, SlidersHorizonta
 import {useAppDispatch, useAppSelector} from "@/app/redux";
 import {setIsSideBarCollapsed} from "@/state";
 import SideBarLinks from "@/app/(components)/Sidebarlinks";
+import Image from "next/image";
 
 const Sidebar = () => {
     const sidebarLinks = [
@@ -25,7 +26,7 @@ const Sidebar = () => {
     return (
         <div className={sideBareClassNames}>
             <div className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${isSideBarCollapsed ? 'px-5' : 'px-8'}`}>
-                <div>logo</div>
+                <Image src="https://inventory-s3-management.s3.ap-south-1.amazonaws.com/logo.png" alt="logo" width={27} height={27} className={`rounded w-8`}/>
                 <h1 className={`font-extra bold text-2xl ${isSideBarCollapsed ? 'hidden' : 'block'}`}>Binge Stock</h1>
             <button
                 className={`md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100`}
